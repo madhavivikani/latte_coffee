@@ -1,0 +1,1681 @@
+/* online connectivity */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Spicy+Rice&display=swap'); */
+
+
+/* offline connectivity */
+
+/* roboto-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.eot');
+    src: url('../fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+         url('../fonts/roboto-v30-latin-regular.woff') format('woff'), 
+         url('../fonts/roboto-v30-latin-regular.ttf') format('truetype'),
+         url('../fonts/roboto-v30-latin-regular.svg#Roboto') format('svg');
+  }
+
+/* spicy-rice-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Spicy Rice';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/spicy-rice-v21-latin-regular.eot');
+    src: url('../fonts/spicy-rice-v21-latin-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/spicy-rice-v21-latin-regular.woff2') format('woff2'),
+         url('../fonts/spicy-rice-v21-latin-regular.woff') format('woff'),
+         url('../fonts/spicy-rice-v21-latin-regular.ttf') format('truetype'),
+         url('../fonts/spicy-rice-v21-latin-regular.svg#SpicyRice') format('svg'); 
+  }
+
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Spicy Rice', cursive; */
+:root {
+    --bg_coffee:#514242;
+    --bg_header:#5E473E;
+    --roboto:'Roboto', sans-serif;
+    --spicy_rice:'Spicy Rice', cursive;
+    --bg_white:#FFFFFF;
+    --bg_hover_coffee:#BE9E7D;
+    --slider_color:#31190F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a 
+{
+    text-decoration: none;
+    display: inline-block;
+}
+ul
+{
+    list-style: none;
+}
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container {
+    width: 1320px;
+    margin: auto;
+}
+.spacer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+/* ================================= start header ======================================== */
+.top_header
+{
+    background-color: var(--bg_header);
+    justify-content: space-between;
+    width: 100%;
+    /* position: fixed; */
+}
+.logo
+{
+    margin-left: 50px;
+    padding: 7px 0px;
+}
+.main_menu > li > a
+{
+    font-family: var(--roboto);
+    font-size: 18px;
+    color: var(--bg_white);
+    margin: 25px;
+}
+.main_menu > li > a >i
+{
+    padding-left:6px;
+    font-size: 15px;
+}
+.main_menu > li:hover > a
+{
+    color: var(--bg_hover_coffee);
+}
+.main_menu li.active a
+{
+    color: var(--bg_hover_coffee);
+}
+.icon_btn
+{
+    font-size: 18px;
+    color: var(--bg_white);
+    padding: 25px;
+}
+.icon_btn > i
+{
+    margin:2px 20px;
+}
+.icon_btn > a
+{
+    font-size: 18px;
+    color: var(--bg_white); 
+    font-weight: bold;
+    font-family: var(--roboto);
+}
+.icon_btn:hover > a
+{
+    color: var(--bg_hover_coffee);
+}
+
+.main_menu > li
+{
+    position: relative;
+}
+.sub_menu
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:white;
+    box-shadow: 1px 1px 2px black;
+    width:200px;
+    display: none;
+    z-index: 2;
+}
+.sub_menu > li > a
+{
+    font-family: var(--roboto);
+    font-size: 15px;
+    color: var(--bg_coffee);
+    padding:7px 40px;
+    letter-spacing: 1px;
+}
+.sub_menu > li:hover >a
+{
+    color: var(--bg_hover_coffee);
+}
+hr
+{
+    margin-left: 20px;
+}
+.main_menu li:hover .sub_menu
+{
+    display: block;
+}
+
+/* ================================= end header ======================================== */
+
+
+/* ================================= start slider ======================================== */
+#slider .owl-nav
+{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40px);
+    left: 0;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.nuts
+{
+    position: absolute;
+    top:150px;
+    right:29.5%;
+}
+.the_cafe
+{
+    position: absolute;
+    top:150px;
+    right:50%;
+}
+.the_design
+{
+    position: absolute;
+    top:100px;
+    left:18%;
+}
+.slider_det::before
+{
+    content: "";
+    background-image: url(../image/teste_left.png);
+    background-size: contain;
+    position: absolute;
+    width:50px;
+    height:50px;
+    background-repeat: no-repeat;
+    bottom: 138px;
+    right:37%;
+}
+.slider_det_1::before
+{
+    content: "";
+    background-image: url(../image/teste_left.png);
+    background-size: contain;
+    position: absolute;
+    width:50px;
+    height:50px;
+    background-repeat: no-repeat;
+    bottom:150px;
+    right:63%;
+}
+.slider_det_2::before
+{
+    content: "";
+    background-image: url(../image/teste_left.png);
+    background-size: contain;
+    position: absolute;
+    width:50px;
+    height:50px;
+    background-repeat: no-repeat;
+    bottom:160px;
+    left:13%;
+}
+.slider_det::after
+{
+    content: "";
+    background-image: url(../image/teste_right.png);
+    background-size: contain;
+    position: absolute;
+    width:50px;
+    height:50px;
+    background-repeat: no-repeat;
+    bottom: 138px;
+    right:22%;
+}
+.slider_det_1::after
+{
+    content: "";
+    background-image: url(../image/teste_right.png);
+    background-size: contain;
+    position: absolute;
+    width:50px;
+    height:50px;
+    background-repeat: no-repeat;
+    bottom: 150px;
+    right:38.5%;
+}
+.slider_det_2::after
+{
+    content: "";
+    background-image: url(../image/teste_right.png);
+    background-size: contain;
+    position: absolute;
+    width:50px;
+    height:50px;
+    background-repeat: no-repeat;
+    bottom: 160px;
+    left:27%;
+}
+.slider_det > .d_fresh
+{
+    position: absolute;
+    top: 250px;
+    right:21.5%;
+    font-family: var(--spicy_rice);
+    font-size: 60px;
+    color:#331B10;
+}
+.slider_det_1 > .speciyal
+{
+    position: absolute;
+    top: 250px;
+    left:33%;
+    font-family: var(--spicy_rice);
+    font-size: 60px;
+    color:#874D34;
+}
+.slider_det_2> .now
+{
+    position: absolute;
+    top: 210px;
+    left:17%;
+    font-family: var(--spicy_rice);
+    font-size: 60px;
+    color:#874D34;
+}
+.slider_det > .coffee
+{
+    position: absolute;
+    top: 340px;
+    right:27%;
+    font-family: var(--roboto);
+    font-size: 40px;
+    color:#331B10;
+    font-weight: bold;
+}
+.slider_det_1 > .for
+{
+    position: absolute;
+    top: 330px;
+    right:50%;
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color:#874D34;
+    font-weight: bold;
+}
+.slider_det_2 > .seek_out
+{
+    position: absolute;
+    top:280px;
+    left:3%;
+    font-family: var(--spicy_rice);
+    font-size: 60px;
+    color:#874D34;
+    font-weight: bold;
+}
+.slider_det > .flat_50
+{
+    position: absolute;
+    top: 385px;
+    right:23%;
+    font-family: var(--roboto);
+    font-size: 40px;
+    color:#331B10;
+    font-weight: bold;
+}
+.slider_det_1 > .cold
+{
+    position: absolute;
+    top: 385px;
+    right:45%;
+    font-family: var(--roboto);
+    font-size: 40px;
+    color:#874D34;
+    font-weight: bold;
+}
+.slider_det_2 > .off_50
+{
+    position: absolute;
+    top: 370px;
+    left:13%;
+    font-family: var(--roboto);
+    font-size: 40px;
+    color:#331B10;
+    font-weight: bold;
+}
+.slider_det > .teste
+{
+    position: absolute;
+    top:450px;
+    right:27%;
+    font-family: var(--roboto);
+    font-size: 22px;
+    color:var(--bg_white);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.slider_det_1 > .win
+{
+    position: absolute;
+    top:440px;
+    right:43%;
+    font-family: var(--roboto);
+    font-size: 22px;
+    color:var(--bg_white);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.slider_det_2 > .happy
+{
+    position: absolute;
+    top:430px;
+    left:17%;
+    font-family: var(--roboto);
+    font-size: 22px;
+    color:var(--bg_white);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.buy_btn > a
+{
+    position: absolute;
+    bottom:90px;
+    right:27.7%;
+    background-color:var(--bg_hover_coffee);
+    color: var(--bg_white);
+    padding: 15px 17px;
+    font-family: var(--roboto);
+    font-weight: bold;
+}
+.buy_btn:hover > a
+{
+    background-color: var(--bg_header);
+}
+.buy_btn1 > a
+{
+    position: absolute;
+    bottom:90px;
+    right:48%;
+    background-color:var(--bg_hover_coffee);
+    color: var(--bg_white);
+    padding: 15px 17px;
+    font-family: var(--roboto);
+    font-weight: bold;
+}
+.buy_btn1:hover > a
+{
+    background-color: var(--bg_header);
+}
+.buy_btn2 > a
+{
+    position: absolute;
+    bottom:110px;
+    left:18%;
+    background-color:var(--bg_hover_coffee);
+    color: var(--bg_white);
+    padding: 15px 17px;
+    font-family: var(--roboto);
+    font-weight: bold;
+}
+.buy_btn2:hover > a
+{
+    background-color: var(--bg_header);
+}
+/* ================================= end slider ======================================== */
+
+/* ============================= start three part section ===================================== */
+.main_bg
+{
+    width: 100%;
+    background-color:transparent;
+}
+.title_coffee
+{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+.title_coffee > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color:#514242;
+}
+.part_det_1
+{
+    width: 33.33%;
+    background-color:transparent;
+    margin-top: 40px;
+}
+.part_img
+{
+    width: 33.33%;
+    background-color:transparent;
+    padding-left:85px;
+}
+.part_det_2
+{
+    width: 33.33%;
+    background-color:transparent;
+    margin-top: 40px;
+}
+.left_part,.right_part
+{
+    margin-bottom: 70px;
+}
+.left_det
+{
+    width: 80%;
+    background-color:transparent;
+    text-align: end;
+}
+.left_img
+{
+    width: 20%;
+    background-color:transparent;
+    text-align: end;
+}
+.left_det > font
+{
+    font-family: var(--spicy_rice);
+    font-size: 20px;
+    color: #874D34;
+    margin-bottom:10px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+.left_det:hover > font
+{
+    color:#D1C6CB;
+}
+.left_det > p
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: #000000;
+    line-height:32px;
+}
+.right_img
+{
+    width: 20%;
+    background-color:transparent;
+}
+.right_det
+{
+    width: 80%;
+    background-color:transparent;
+}
+.right_det > font
+{
+    font-family: var(--spicy_rice);
+    font-size: 20px;
+    color: #874D34;
+    margin-bottom:10px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+.right_det:hover > font
+{
+    color: #D1C6CB;
+}
+.right_det > p
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: #000000;
+    line-height:32px;
+}
+/* ============================= start three part section ===================================== */
+
+
+/* ============================= start parallex part ===================================== */
+.bg_par_img
+{
+    background-image: url(../image/parallex_img.jpeg);
+    height:700px;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+.bg_tras
+{
+    height: 700px;
+    background-color: rgba(232, 231, 229,0.5);
+}
+.parallex_det
+{
+    padding-top: 120px;
+    margin-left: 33%;
+}
+.parallex_det > .upgrade
+{
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color: #514242;
+    padding-bottom: 10px;
+}
+.parallex_det > .msg
+{
+    font-family: var(--spicy_rice);
+    font-size: 24px;
+    color: #A45F41;
+    padding-bottom: 20px;
+}
+.lorem_p
+{
+    width: 55%;
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: #473c3c;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+.show_btn > a
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: white;
+    background-color: var(--bg_hover_coffee);
+    padding: 15px 20px;
+    margin-top: 20px;
+    font-weight: bolder;
+    transition: .3s;
+}
+.show_btn:hover > a
+{
+    background-color: var(--bg_header);
+}
+/* ============================= end parallex part ===================================== */
+
+
+/* ============================= start two section part ===================================== */
+.all_bg
+{
+    width:100%;
+    background-image: url(../image/back_ground.png);
+    background-repeat: no-repeat;
+    background-position:c center;
+    background-size: cover;
+}
+.title_makes
+{
+    padding-left: 50px;
+}
+.title_makes > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 28px;
+    color: #514242;
+}
+.make_our_bg .img_part
+{
+    width: 45%;
+}
+.del_part
+{
+    width: 55%;
+}
+.img_part img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.make_our_bg
+{
+    padding-top: 130px;
+    padding-bottom: 130px;
+    width: 100%;
+}
+.all_parent
+{
+    width: 100%;
+    margin: 40px 0;
+}
+.img_small
+{
+    width: 20%;
+    text-align: center;
+}
+.del_part_small
+{
+    width: 80%;
+}
+.del_part_small .pure
+{
+    font-family: var(--spicy_rice);
+    font-size: 20px;
+    color: #874D34;
+    padding-bottom: 10px;
+}
+.del_part_small:hover > .pure
+{
+    color:#BE9C79;
+}
+.del_part_small .lorem_right
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: #473c3c;
+    line-height: 25px;
+    letter-spacing:.5px;
+}
+/* ============================= end two section part ===================================== */
+
+
+/* ============================= start more than tea & coffe part ===================================== */
+.blur
+{
+    background-image:url(../image/blur.jpg);
+    width: 100%;
+    background-position: center center;
+}
+.blur_Details
+{
+    text-align: center;
+    padding: 70px 0px;
+}
+.feel
+{
+    font-family: var(--roboto);
+    font-size: 18px;
+    color: var(--bg_white);
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+.more_than
+{
+    font-family: var(--spicy_rice);
+    font-size: 60px;
+    color: var(--bg_white);
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+.off_flat
+{
+    font-family: var(--roboto);
+    font-size: 34px;
+    color: var(--bg_white);
+    padding-bottom: 20px;
+}
+/* ============================= end more than tea & coffe part ===================================== */
+
+
+/* ============================= satrt our product part ===================================== */
+.title_p
+{
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 70px;
+    
+}
+.our_p
+{
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color: #514242;
+    padding-bottom: 10px;
+}
+.lorem_pro
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: #473c3c;
+    letter-spacing: .5px;
+    padding-bottom:7px;
+}
+.three_btn
+{
+    gap: 10px;
+    padding-bottom: 50px;
+}
+.btn1 > a,.btn2 > a,.btn3 > a
+{
+    background-color:var(--slider_color);
+    padding: 8px 25px;
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: white;
+}
+.btn1:hover > a,.btn2:hover > a,.btn3:hover > a
+{
+    background-color: #BE9C79;
+}
+/* ============================= end our product part ===================================== */
+
+
+/* ============================= start product part ===================================== */
+#two .item
+{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+    position: relative;
+}
+#three .item
+{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+    position: relative;
+    margin-top:50px;
+}
+.icon > .one_i
+{
+    display: block;
+    height:30px;
+    width: 30px;
+    background-color:var(--bg_header);
+    margin-bottom: 10px;
+    padding:7.5px;
+    position: absolute;
+    top:130px;
+    right: 10px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translatex(40px);
+    transition: .3s;
+}
+.icon > .two_i
+{
+    display: block;
+    height:30px;
+    width: 30px;
+    background-color:var(--bg_header);
+    margin-bottom: 10px;
+    padding:7.5px;
+    position: absolute;
+    top:170px;
+    right: 10px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translatex(40px);
+    transition: .3s;
+}
+.item:hover .one_i,.item:hover .two_i,.item:hover .three_i
+{
+    opacity: 1;
+    visibility: visible;
+    transform: translatex(0px);
+    transition: .3s;
+
+}
+.icon > .three_i
+{
+    display: block;
+    height:30px;
+    width: 30px;
+    background-color:var(--bg_header);
+    margin-bottom: 10px;
+    padding:7.5px;
+    position: absolute;
+    top:210px;
+    right: 10px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translatex(40px);
+    transition: .3s;
+}
+.item:hover
+{
+    border: 1px solid var(--bg_header);
+}
+.text > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 18px;
+    color: #BE9C79;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.text > .dollar
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: #5E473E;
+    margin-left: 20px;
+    display: inline-block;
+}
+.dollar i
+{
+    margin-left: 200px;
+}
+.text
+{
+    position: relative;
+}
+.shape
+{
+    height: 15px;
+    width: 15px;
+    background-color:#331B10;
+    transform: rotate(45deg);
+    margin-left: 150px;
+    margin-bottom: 15px;
+}
+.text::before
+{
+    content:"";
+    background-color:gray;
+    height: 1px;
+    width: 35%;
+    position: absolute;
+    top:75px;
+    left: 20px;
+}
+.text::after
+{
+    content:"";
+    background-color:gray;
+    height: 1px;
+    width: 35%;
+    position: absolute;
+    top:75px;
+    right:20px;
+}
+.item_img
+{
+    position: relative;
+}
+.item_img .img_1
+{
+    opacity: 1;
+}
+#two .item:hover .img_1,#three .item:hover .img_1
+{
+    opacity: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+.item_img .img_2
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+#two .item:hover .img_2,#three .item:hover .img_2
+{
+    opacity: 1;
+}
+/* ============================= start product part ===================================== */
+
+
+/* ============================= start gallery part ===================================== */
+.gallery
+{
+    width: 100%;
+    background-color: #31190F;
+}
+.g_1,.g_2,.g_3,.g_4
+{
+    width: 25%;
+    background-color: red;
+}
+.g_1 img,.g_2 img,.g_3 img,.g_4 img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* ============================= end gallery part ===================================== */
+
+
+/* ============================= start line part ===================================== */
+.main_div
+{
+    width: 100%;
+}
+.left_side,.right_side
+{
+    width: 50%;
+}
+.bottom_sapce
+{
+    margin-bottom: 70px;
+}
+.left > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 24px;
+    color: #874D34;
+    padding-bottom: 5px;
+}
+.left:hover > p
+{
+    color:var(--bg_hover_coffee);
+}
+.right_mrp > p
+{
+    font-family: var(--roboto);
+    font-size: 20px;
+    color: #301914;
+}
+.left_side,.right_side
+{
+    padding:20px 20px 10px 20px;
+    position: relative;
+}
+.left_side > p,.right_side > p
+{
+    font-family:var(--roboto);
+    font-size: 16px;
+    color: black;
+}
+.line > p
+{
+    transform: translatey(10px);
+}
+/* ============================= end line part ===================================== */
+
+
+/* ============================= satrt five img part ===================================== */
+.mian_det
+{
+    background-image: url(../image/blur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 100px;
+}
+.mian_det > .pop
+{
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.mian_det > .lorem_pop
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: white;
+    margin:auto;
+    width:40%;
+    text-align: center;
+}
+.p_collection
+{
+    width: 100%;
+    padding: 50px 10px 100px 10px;
+}
+.p_1,.p_2,.p_3,.p_4,.p_5
+{
+    width: 20%;
+    border: 15px solid transparent;
+}
+.p_1 img,.p_2 img,.p_3 img,.p_4 img,.p_5 img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.img_content > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    transition: .7s;
+}
+.img_content:hover p
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color:var(--bg_hover_coffee);
+    transition: .5s;
+}
+/* ============================= end five img part ===================================== */
+
+
+/* ============================= start four part ===================================== */
+.bg_white
+{
+    justify-content:space-around;
+    padding: 100px 0;
+    text-align: center;
+}
+.c_1 img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.c_content > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 26px;
+    color: var(--bg_header);
+    padding-bottom: 8px;
+    padding-top: 20px;
+}
+.c_content > h6
+{
+    font-size: 18px;
+    font-family: var(--roboto);
+    color:#BE9C79;
+}
+/* ============================= start four part ===================================== */
+
+
+/* ============================= start input part ===================================== */
+.bg_img
+{
+    background-image: url(../image/blur.jpg);
+    height: 400px;
+    width: 100%;
+    background-position: center center;
+    /* text-align: center; */
+    padding-top: 80px;
+}
+.bg_img .news
+{
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color: white;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.bg_img .news_lorem
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: white;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.input_part > input
+{
+    padding: 15px 250px 15px 20px;
+    font-size: 16px;
+    margin-left:30%;
+}
+.input_part > a
+{
+    color: white;
+    padding: 15px 25px;
+    background-color:var(--bg_hover_coffee);
+    margin-left: 10px;
+    font-weight: bold;
+}
+/* ============================= end input part ===================================== */
+
+
+/* ============================= start four slider logo img part ===================================== */
+#four .item
+{
+    border: 1px solid black;
+}
+#four .owl-dot.owl-dot.active
+{
+    color: red;
+}
+.logo_img img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.extra_space
+{
+    padding-bottom: 70px;
+}
+/* ============================= end four slider logo img part ===================================== */
+
+/* ============================= start footer part ===================================== */
+.main_parent
+{
+    width: 100%;
+}
+.left_back,.right_back
+{
+    width: 50%;
+    background-color:black;
+}
+.left_back > p
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color:white;
+    text-align: center;
+    padding: 30px 0;
+}
+.right_back
+{
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+/* ============================= start footer part ===================================== */
+
+
+
+
+/* ++++++++++++++++++++++++++++++++ start about page ++++++++++++++++++++++++++++++++++++++++++ */
+/* ============================= start title part ===================================== */
+
+.bg_gray
+{
+    background-color:#F5F5F5;
+    text-align: center;
+    padding: 60px 0;
+}
+.parent_g > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 30px;
+    color: var(--bg_header);
+}
+.parent_g > h6
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: var(--bg_header);
+}
+/* ============================= end title part ===================================== */
+
+
+/* ================================ start our patrners part ===================================== */
+
+.our_patner
+{
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color: var(--bg_header);
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.img_patners
+{
+    gap: 30px;
+    padding-bottom:80px;
+    transition: .3s;
+}
+.img_patners .one_p:hover
+{
+    transform: scale(1.1);
+    transition: .3s;
+}
+.icon_p
+{
+    opacity: 0;
+    transition: .3s;
+}
+.one_p > p
+{
+    font-family: var(--spicy_rice);
+    font-size: 20px;
+    color: var(--bg_hover_coffee);
+    text-align: center;
+}
+.one_p > h6
+{
+    font-family: var(--spicy_rice);
+    font-size: 20px;
+    color:var(--bg_header);
+    text-align: center;
+    letter-spacing: 1px;
+}
+.icon_p > i
+{
+    padding: 7px 7px;
+    background-color:var(--bg_hover_coffee);
+    color: white;
+    transform: translateX(80px);
+}
+.one_p:hover .icon_p
+{
+    transform: translateY(-60px);
+    opacity: 1;
+    transition: .3s;
+}
+/* ================================ end our patrners part ===================================== */
+
+
+/* ================================ start slider part ===================================== */
+
+center img
+{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.thumnail a
+{
+    opacity: 0.5;
+}.thumnail a.active
+{
+    opacity: 1;
+}
+.five_s
+{
+    background-image:url(../image/bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.tras
+{
+    background-color:rgba(0, 0, 0, 0.7);
+    height: 650px;
+
+}
+.bg_color .test
+{
+    font-family:var(--spicy_rice);
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top:140px;
+    padding-bottom: 20px;
+}
+.five_img
+{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+.bg_color > p
+{
+    color: white;
+    font-family: var(--roboto);
+    font-size: 16px;
+    width: 50%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom:30px;
+
+}
+.bg_color > h6
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: #A45F41;
+    text-align: center;
+    padding-bottom: 60px;
+}
+#five .owl-nav
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    padding-top: 28px;
+}
+/* ================================ end slider part ===================================== */
+
+
+/* ================================ start five image part ===================================== */
+
+.main_five
+{
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 80px;
+}
+.f_ive_1,.f_ive_2,.f_ive_3,.f_ive_4,.f_ive_5
+{
+    width: 20%;
+    background-color: yellow;
+    height: 300px;
+}
+.f_ive_1 img,.f_ive_2 img,.f_ive_3 img,.f_ive_4 img,.f_ive_5 img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 15px solid white;
+}
+/* ================================ end five image part ===================================== */
+
+/* ================================ start custtomer part ===================================== */
+.c_title
+{
+    font-family: var(--spicy_rice);
+    font-size: 40px;
+    color: #331B10;
+    text-align: center;
+}
+.main_c
+{
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 15px;
+    padding-top: 60px;
+}
+.inner_c
+{
+    width:24%;
+    border: 1px solid var(--bg_header);
+}
+.one_c,.one_c_r
+{
+    width: 50%;
+    padding:25px 20px;
+}
+.one_c_r
+{
+    width: 50%;
+    padding:25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.K_50
+{
+    font-size: 30px;
+    color:#BE9C79;
+    font-family: var(--spicy_rice);
+    letter-spacing: 1px;
+    padding-bottom:7px;
+}
+.main_c font
+{
+    color:#5E473E;
+}
+.b_c
+{
+    font-family: var(--spicy_rice);
+    font-size: 24px;
+    color:var(--bg_header);
+    padding-bottom: 7px;
+}
+.c_lorem
+{
+    font-size: 16px;
+    font-family: var(--roboto);
+    color: black;
+    width:120%;
+    font-weight: bold;
+    line-height: 23px;
+}
+.img_b > i
+{
+    padding:25px 25px;
+    border: 1px solid var(--slider_color);
+    font-size: 35px;
+    border-radius: 50px;
+    background-color:var(--bg_hover_coffee);
+    transition: .3s;
+}
+.img_b:hover > i
+{
+    background-color: transparent;
+    transform: rotatex(160deg);
+    transition: .3s;
+}
+/* ================================ end custtomer part ===================================== */
+
+/* ================================ start info part ===================================== */
+
+.main_part
+{
+    width: 100%;
+    padding: 80px 0;
+}
+.one_part
+{
+    width: 25%;
+}
+.main_p
+{
+    background-color: #331B10;
+}
+.help
+{
+    font-family: var(--spicy_rice);
+    color: var(--bg_hover_coffee);
+    font-size: 24px;
+    padding-bottom: 7px;
+}
+.l_1
+{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: white;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+.l_1 > i
+{
+    padding-right: 10px;
+}
+.l_1:hover
+{
+    color: var(--bg_hover_coffee);
+}
+/* ================================ end info part ===================================== */
+
+/* ================================ start two section part ===================================== */
+.main_bg_c,.main_bg_icon
+{
+    width: 100%;
+    background-color: #F9EFD4;
+    flex-wrap: wrap;
+}
+.one_crem
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.p
+{
+    font-family: var(--spicy_rice);
+    font-size: 24px;
+    color: var(--bg_hover_coffee);
+    padding-top: 50px;
+    padding-bottom:15px;
+}
+.one_crem > i
+{
+    font-size: 17px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+/* ================================ end two section part ===================================== */
+
+.form
+{
+    font-family: var(--spicy_rice);
+    font-size: 28px;
+    color: var(--slider_color);
+    padding: 70px 0 30px 0; 
+}
+.main_info
+{
+    width: 100%;
+    gap: 20px;
+}
+.one_info
+{
+    width: 32%;
+    padding-bottom: 30px;
+}
+.one_info > input
+{
+    width: 100%;
+    padding: 15px 0 15px 30px;
+    font-style: var(--roboto);
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.msg
+{
+    width:99%;
+}
+.msg > input
+{
+    width: 100%;
+    padding:15px 0 300px 30px;
+    font-style: var(--roboto);
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+.send_btn
+{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 100px;
+
+}
+.send_btn > a
+{
+    padding: 15px 0;
+    width: 33.33%;
+    background-color: var(--bg_hover_coffee);
+    color: white;
+    font-family: var(--roboto);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.send_btn:hover > a
+{
+    background-color: var(--bg_header);
+}
+/* +++++++++++++++++++++++++++++++++ */
+.img_part
+{
+    width: 100%;
+    padding-bottom: 50px;
+}
+.img_1
+{
+    width: 50%;
+}
+.real_img > img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid white;
+}
+.inner_p
+{
+    width:50%;
+    padding:10px;
+}
+.one_in > i
+{
+    padding-right: 3px;
+    font-size: 16px;
+}
+.one_in > span
+{
+    padding-left: 5px;
+    padding-right:19px;
+    font-size: 18px;
+    font-style: var(--roboto);
+}
+.bean
+{
+    padding: 10px;
+    font-size: 28px;
+    font-family: var(--spicy_rice);
+    color:#BE966D;
+}
+.bean:hover
+{
+    color: var(--bg_hover_coffee);
+}
+.inner_lorem
+{
+    font-style: var(--roboto);
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    letter-spacing: .5px;
+}
+/* ++++++++++++++++++ */
+.main_btn
+{
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+.main_btn > .f_btn
+{
+    padding: 7px 10px;
+    background-color: var(--bg_header);
+}
+.main_btn > .f_btn:hover
+{
+    background-color:var(--slider_color);
+}
+.f_btn > a
+{
+    color: white;
+    font-weight: bold;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.accordion-button
+{
+    font-family: var(--spicy_rice);
+    font-size: 24px;
+    color: white!important;
+    background-color: #5E473E!important;
+    letter-spacing: 1px;
+}
+.accordion-button > i
+{
+    font-weight: bold;
+    padding-right: 10px;
+}
+.accordion-body
+{
+    padding: 30px 20px;
+}
+.extra_space
+{
+    padding-bottom: 100px;
+}

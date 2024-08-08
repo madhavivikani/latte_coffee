@@ -1,0 +1,96 @@
+$(document).ready(function(){
+    $('#slider').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoplay:true,
+        navText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
+    $('#two').owlCarousel({
+        loop:false,
+        margin:20,
+        nav:true,
+        // navText:['prev','next'],
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+    $('#three').owlCarousel({
+        loop:false,
+        margin:20,
+        nav:true,
+        // navText:['prev','next'],
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+    $('#four').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+    $('#five').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        navText:['<i class="fa-sharp fa-solid fa-angle-left"></i>','<i class="fa-sharp fa-solid fa-angle-right"></i>'],
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
+    $('.thumnail > a').click(function(){
+        $('.thumnail > a').removeClass('active');
+        $(this).addClass('active');
+    })
+
+});
